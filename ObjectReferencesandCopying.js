@@ -95,13 +95,37 @@ let family = marry({name: "John"}, {name: "Anna"})
 //     }
 // }
 // --------------------------or-------------------------
-user = {
+let user5 = {
     sayHi(){
-        console.log('Hello')
+        return 'Hello'
     }
 }
+// console.log(user5.sayHi())
 
+//this in Object
+let newUser2 = {
+    name: "John",
+    age: 30,
+    sayHi(){
+        // console.log(this.name)
+        // console.log(user.name) // In this case, user instead of this
+    }
+}
+newUser2.sayHi()
 
+//use of "this" in reference to the object
+
+let newUser9 = {
+    name: "John",
+    age: 30,
+    sayHi(){
+        console.log(this.name)
+        // console.log(newUser9.age) // leads to an error
+    }
+}
+let admin = newUser9;
+newUser9 = null;
+admin.sayHi()
 
 
 
