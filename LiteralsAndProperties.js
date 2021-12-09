@@ -99,17 +99,23 @@
 // }
 // console.log(sum) // 390
 
-// let doubleNumber = {
-//     numberOne: 40,
-//     numberTwo: 50,
-//     numberThree: 60
-// }
-// console.log(multiplyNumeric(doubleNumber))
-// function multiplyNumeric(doubleNumber){
-//   for (let key in doubleNumber){
-//     if (typeof doubleNumber[key] === 'number'){
-//         doubleNumber[key] *= 2;
-//     }
-//   }
-// }
+let doubleNumber = {
+    numberOne: 40,
+    numberTwo: 50,
+    numberThree: 60,
+    title: "Double Number"
+}
+
+multiplyNumeric(doubleNumber)
+
+function multiplyNumeric(doubleNumber){
+  for (let key in doubleNumber){
+    if (typeof doubleNumber[key] === 'number'){
+        doubleNumber[key] *= 2;
+    }
+  }
+}
+for (let key in doubleNumber){
+  console.log(doubleNumber[key])
+}
 
